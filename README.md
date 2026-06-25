@@ -65,12 +65,43 @@ The pipeline supports two modes:
 - **Historical**: one-off batch processing of all available posts
 - **Streaming**: continuous polling with a checkpoint system (atomic file writes to prevent corruption on crash) that tracks the last processed timestamp, enabling safe resumption without reprocessing data
 
-## Tech stack
+## Tech Stack
 
-- **NLP/ML:** CryptoBERT (HuggingFace Transformers), scikit-learn (NMF, TF-IDF)
-- **Data:** ElasticSearch, Redis, yfinance, NewsAPI
-- **Infrastructure:** Kubernetes, Fission (serverless functions), Docker
-- **Languages:** Python
+**Languages**
+- Python
+
+**Cloud & Infrastructure**
+- NeCTAR Research Cloud
+- Kubernetes
+- Docker
+- Fission (serverless functions)
+
+**Data Storage & Messaging**
+- ElasticSearch
+- Redis
+
+**NLP / Machine Learning** *(my contribution)*
+- CryptoBERT (HuggingFace Transformers)
+- PyTorch
+- scikit-learn (NMF, TF-IDF)
+
+**Data Sources & APIs**
+- BlueSky API (atproto)
+- Mastodon API (Mastodon.py)
+- yfinance
+- NewsAPI
+
+**Backend / Web**
+- Flask
+- websockets, httpx (async streaming)
+- BeautifulSoup (text cleaning)
+
+**Frontend**
+- Jupyter Notebook
+
+**Tooling**
+- uv (package management)
+- GitLab (version control)
 
 ## Limitations
 
