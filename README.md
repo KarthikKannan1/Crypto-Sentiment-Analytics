@@ -1,93 +1,99 @@
-# COMP90024_team_78
+# CryptoPulse: Real-Time Crypto Sentiment & Price Correlation Engine
 
+A cloud-native big data pipeline that harvests cryptocurrency-related social media posts from **BlueSky** and **Mastodon**, scores sentiment using a domain-specific transformer model, discovers emerging narratives, and correlates public sentiment with real-world price movements across five major cryptocurrencies.
 
+Originally built as a university group project (COMP90024 - Cluster and Cloud Computing, University of Melbourne), this repository contains my individual contribution: the **NLP and machine learning pipeline**, plus the overall system architecture.
 
-## Getting started
+> **Note:** This was a 5-person team project. My primary responsibility was the sentiment analysis, topic modelling, and price correlation pipeline (`backend/ml/`). Data harvesting (`backend/backfill_data_ingestion/`, `backend/live_streaming_ingestion/`), Fission/Kubernetes infrastructure (`backend/fission/`), and the frontend notebook were built by teammates as part of a collaborative cloud computing assignment.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+---
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## What it does
 
-## Add your files
+1. **Harvests** crypto-related posts from BlueSky and Mastodon, both historical backfill and live streaming
+2. **Processes & cleans** raw posts via serverless Fission functions, storing them in ElasticSearch
+3. **Scores sentiment** using [CryptoBERT](https://huggingface.co/ElKulako/cryptobert), a transformer model fine-tuned on crypto social media text
+4. **Discovers narratives** using Non-negative Matrix Factorisation (NMF) topic modelling
+5. **Detects price spikes** from live market data (via yfinance) and classifies them by severity and direction
+6. **Contextualises spikes** with Australian news headlines (NewsAPI)
+7. **Correlates** sentiment against price movement (same-week, next-week, lagged)
+8. **Visualises** everything through a Jupyter Notebook frontend
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## Architecture
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.unimelb.edu.au/jpp1/comp90024_team_78.git
-git branch -M main
-git push -uf origin main
+Social Media APIs (BlueSky / Mastodon)
+        │
+        ▼
+Backfill Crawlers + Live Streamers
+        │
+        ▼
+Fission Functions (clean, format, enqueue via Redis)
+        │
+        ▼
+ElasticSearch (processed-data index)
+        │
+        ▼
+ML Pipeline (CryptoBERT → NMF → Price Correlation)
+        │
+        ▼
+ElasticSearch (4 output indices: spike_events, daily_sentiment, narratives, correlations)
+        │
+        ▼
+Jupyter Notebook Frontend
 ```
 
-## Integrate with your tools
+The entire system is deployed on Kubernetes, with serverless data processing handled by Fission and persistent storage/search handled by ElasticSearch.
 
-* [Set up project integrations](https://gitlab.unimelb.edu.au/jpp1/comp90024_team_78/-/settings/integrations)
+## My contribution: the ML pipeline (`backend/ml/`)
 
-## Collaborate with your team
+| File | Purpose |
+|---|---|
+| `sentiment_analysis.py` | CryptoBERT sentiment scoring with confidence thresholding |
+| `narrative_analysis.py` | NMF topic modelling + price/volatility regime classification |
+| `price_analysis.py` | Price fetching, spike detection, Australian news context, correlation analysis |
+| `updated_results.py` | Main pipeline orchestration, supports historical and continuous streaming modes |
+| `scripts/updated_es_query.py` | ElasticSearch query layer with checkpoint-based pagination for streaming |
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Why CryptoBERT over VADER/TextBlob?
 
-## Test and Deploy
+General-purpose sentiment models misclassify or ignore crypto-specific slang ("hodl", "rekt", "mooning"). CryptoBERT is fine-tuned specifically on crypto social media text, giving significantly more accurate sentiment classification for this domain.
 
-Use the built-in continuous integration in GitLab.
+### Why NMF over hardcoded keywords or LDA?
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+Hardcoded keyword classification requires constant manual maintenance and can't surface narratives that weren't anticipated in advance. NMF produces sparse, interpretable topics and scales efficiently as the corpus grows, well suited to an evolving, real-time social feed.
 
-***
+### Streaming architecture
 
-# Editing this README
+The pipeline supports two modes:
+- **Historical**: one-off batch processing of all available posts
+- **Streaming**: continuous polling with a checkpoint system (atomic file writes to prevent corruption on crash) that tracks the last processed timestamp, enabling safe resumption without reprocessing data
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Tech stack
 
-## Suggestions for a good README
+- **NLP/ML:** CryptoBERT (HuggingFace Transformers), scikit-learn (NMF, TF-IDF)
+- **Data:** ElasticSearch, Redis, yfinance, NewsAPI
+- **Infrastructure:** Kubernetes, Fission (serverless functions), Docker
+- **Languages:** Python
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## Limitations
 
-## Name
-Choose a self-explaining name for your project.
+- Sentiment models struggle with sarcasm, a known limitation of transformer-based sentiment classifiers on social media text
+- NewsAPI's free tier limits historical news context to the past 30 days
+- ElasticSearch query size limits constrain the volume of posts processed per batch in historical mode
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Running it
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+See [`backend/ml/`](./backend/ml/) for the ML pipeline specifically. Requires Python 3.11+, with dependencies managed via `uv` (see `pyproject.toml`).
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```bash
+cd backend/ml
+uv sync
+python updated_results.py --mode historical
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Requires a running ElasticSearch instance with crypto-related posts indexed (see `database/mappings/` for index schemas).
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+See [LICENSE](./LICENSE).
