@@ -4,8 +4,6 @@ A cloud-native big data pipeline that harvests cryptocurrency-related social med
 
 Originally built as a university group project (COMP90024 - Cluster and Cloud Computing, University of Melbourne), this repository contains my individual contribution: the **NLP and machine learning pipeline**, plus the overall system architecture.
 
-> **Note:** This was a 5-person team project. My primary responsibility was the sentiment analysis, topic modelling, and price correlation pipeline (`backend/ml/`). Data harvesting (`backend/backfill_data_ingestion/`, `backend/live_streaming_ingestion/`), Fission/Kubernetes infrastructure (`backend/fission/`), and the frontend notebook were built by teammates as part of a collaborative cloud computing assignment.
-
 ---
 
 ## What it does
