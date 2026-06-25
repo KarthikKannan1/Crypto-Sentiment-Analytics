@@ -2,7 +2,7 @@
 
 A cloud-native big data pipeline that harvests cryptocurrency-related social media posts from **BlueSky** and **Mastodon**, scores sentiment using a domain-specific transformer model, discovers emerging narratives, and correlates public sentiment with real-world price movements across five major cryptocurrencies.
 
-Originally built as a university group project (COMP90024 - Cluster and Cloud Computing, University of Melbourne), this repository contains my individual contribution: the **NLP and machine learning pipeline**, plus the overall system architecture.
+Originally built as a university group project (COMP90024 - Cluster and Cloud Computing, University of Melbourne), this repository contains the overall system architecture.
 
 ## What it does
 
