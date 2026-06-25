@@ -4,8 +4,6 @@ A cloud-native big data pipeline that harvests cryptocurrency-related social med
 
 Originally built as a university group project (COMP90024 - Cluster and Cloud Computing, University of Melbourne), this repository contains my individual contribution: the **NLP and machine learning pipeline**, plus the overall system architecture.
 
----
-
 ## What it does
 
 1. **Harvests** crypto-related posts from BlueSky and Mastodon, both historical backfill and live streaming
