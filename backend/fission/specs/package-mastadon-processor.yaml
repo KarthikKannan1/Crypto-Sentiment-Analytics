@@ -1,0 +1,28 @@
+include:
+- ./functions/processors/mastadon-processor/__init__.py
+- ./functions/processors/mastadon-processor/mastadon_processor.py
+- ./functions/processors/mastadon-processor/requirements.txt
+- ./functions/processors/mastadon-processor/build.sh
+- ./utils
+kind: ArchiveUploadSpec
+name: functions-processors-mastadon-processor---init---py-Xgv9
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  name: mastadon-processor
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+    type: url
+    url: archive://functions-processors-mastadon-processor---init---py-Xgv9
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2026-04-27T15:44:41Z"

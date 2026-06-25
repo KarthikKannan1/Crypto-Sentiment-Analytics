@@ -1,0 +1,37 @@
+price_regime,topic_id,topic_label,post_count,percentage_within_price_regime,active_start_date,active_end_date,active_duration_days,coin
+bear/decrease,2,"24h, later, save later, save, watching",328,59.528130671506354,2026-05-11,2026-05-12,2,bitcoin
+bear/decrease,0,"signals tmeju96hnqwgbk, binance iran, iran iranwar, join vip, iranwar join",131,23.77495462794918,2026-05-11,2026-05-12,2,bitcoin
+bear/decrease,3,"nfa, fg, bekle fg, bekle, ykselite",49,8.892921960072595,2026-05-11,2026-05-12,2,bitcoin
+bear/decrease,1,"na, halving, mempool, txs, 20280417",43,7.80399274047187,2026-05-11,2026-05-12,2,bitcoin
+bull/increase,2,"24h, later, save later, save, watching",2760,64.03712296983758,2026-05-04,2026-05-10,7,bitcoin
+bull/increase,0,"signals tmeju96hnqwgbk, binance iran, iran iranwar, join vip, iranwar join",849,19.698375870069608,2026-05-04,2026-05-10,7,bitcoin
+bull/increase,3,"nfa, fg, bekle fg, bekle, ykselite",399,9.257540603248259,2026-05-04,2026-05-10,7,bitcoin
+bull/increase,1,"na, halving, mempool, txs, 20280417",302,7.006960556844548,2026-05-04,2026-05-10,7,bitcoin
+bear/decrease,3,"xrp, investment, memecoin, notspam post, xrp notspam",139,51.291512915129154,2026-05-11,2026-05-12,2,ethereum
+bear/decrease,2,"tracker githubcomargossystemssmartmoneytracker, money tracker, githubcomargossystemssmartmoneytracker, smart money, tracker",62,22.878228782287824,2026-05-11,2026-05-12,2,ethereum
+bear/decrease,0,"listing, nectarvault, bot, listing nectarvault, mainnet boteconomy",37,13.653136531365314,2026-05-11,2026-05-12,2,ethereum
+bear/decrease,1,"api, hr, teckel, store, app",33,12.177121771217712,2026-05-11,2026-05-12,2,ethereum
+neutral/flat,3,"xrp, investment, memecoin, notspam post, xrp notspam",899,49.641082274986196,2026-05-04,2026-05-10,7,ethereum
+neutral/flat,2,"tracker githubcomargossystemssmartmoneytracker, money tracker, githubcomargossystemssmartmoneytracker, smart money, tracker",421,23.246824958586416,2026-05-04,2026-05-10,7,ethereum
+neutral/flat,0,"listing, nectarvault, bot, listing nectarvault, mainnet boteconomy",283,15.626725565985645,2026-05-04,2026-05-10,7,ethereum
+neutral/flat,1,"api, hr, teckel, store, app",208,11.485367200441745,2026-05-04,2026-05-10,7,ethereum
+bull/increase,2,"live trump, moves live, massive moves, catching massive, moves",460,57.14285714285714,2026-05-04,2026-05-10,7,bnb
+bull/increase,0,"charts trump, direct charts, live updates, updates direct, charts",144,17.888198757763977,2026-05-04,2026-05-10,7,bnb
+bull/increase,3,"precise, volatile, volatile entries, precise trump, entries precise",127,15.77639751552795,2026-05-04,2026-05-10,7,bnb
+bull/increase,1,"perfect, perfect entries, perfect execution, execution trump, entries perfect",74,9.192546583850932,2026-05-05,2026-05-10,6,bnb
+neutral/flat,2,"live trump, moves live, massive moves, catching massive, moves",81,50.625,2026-05-11,2026-05-12,2,bnb
+neutral/flat,0,"charts trump, direct charts, live updates, updates direct, charts",36,22.5,2026-05-11,2026-05-12,2,bnb
+neutral/flat,1,"perfect, perfect entries, perfect execution, execution trump, entries perfect",23,14.374999999999998,2026-05-11,2026-05-11,1,bnb
+neutral/flat,3,"precise, volatile, volatile entries, precise trump, entries precise",20,12.5,2026-05-11,2026-05-12,2,bnb
+bear/decrease,3,"eth, sol, bnb, ada, 001",74,77.89473684210526,2026-05-11,2026-05-12,2,xrp
+bear/decrease,0,"intended investment, intended, ethereum notspam, stablecoin ethereum, memecoin altcoin",9,9.473684210526317,2026-05-11,2026-05-12,2,xrp
+bear/decrease,1,"900, cuts, cuts country, country, facilities shutting",6,6.315789473684211,2026-05-11,2026-05-12,2,xrp
+bear/decrease,2,"needs, 20022, xlm money, attack planned, banks collapse",6,6.315789473684211,2026-05-11,2026-05-12,2,xrp
+bull/increase,3,"eth, sol, bnb, ada, 001",612,74.90820073439413,2026-05-04,2026-05-10,7,xrp
+bull/increase,0,"intended investment, intended, ethereum notspam, stablecoin ethereum, memecoin altcoin",78,9.547123623011016,2026-05-05,2026-05-10,6,xrp
+bull/increase,1,"900, cuts, cuts country, country, facilities shutting",64,7.833537331701345,2026-05-05,2026-05-10,6,xrp
+bull/increase,2,"needs, 20022, xlm money, attack planned, banks collapse",63,7.711138310893513,2026-05-04,2026-05-10,7,xrp
+neutral/flat,2,"million, 30, days, 30 days, tron",216,70.35830618892508,2026-05-04,2026-05-12,9,usdt
+neutral/flat,3,"liquidation, long, pair, entry, cross",41,13.355048859934854,2026-05-05,2026-05-12,8,usdt
+neutral/flat,0,"minutes, achieved profit, period, achieved, takeprofit targets",32,10.423452768729643,2026-05-04,2026-05-11,8,usdt
+neutral/flat,1,"xrp, sol, bnb, doge, ada",18,5.863192182410423,2026-05-05,2026-05-12,8,usdt

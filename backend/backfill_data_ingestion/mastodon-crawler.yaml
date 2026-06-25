@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mastodon-crawler
+  labels:
+    app: mastodon-crawler
+spec:
+  parallelism: 5
+  completions: 5
+  completionMode: Indexed
+  template:
+    metadata:
+      labels:
+        app: mastodon-crawler
+    spec:
+      restartPolicy: OnFailure
+    # regcred is the access token for docker repo
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: mastodon-crawler
+        image: alexis90024/ccc_assn2_docker_repo:mastodon-crawler
+        imagePullPolicy: Always
+        env:
+          # Mastodon access tokens
+          - name: MASTODON_SOCIAL_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: mastodon-secret
+                key: mastodon-social
+          - name: MASTODON_WORLD_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: mastodon-secret
+                key: mastodon-world
+          - name: MASTODON_CLOUD_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: mastodon-secret
+                key: mastodon-cloud
+          - name: MASTODON_INFOSEC_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: mastodon-secret
+                key: mastodon-infosec
+

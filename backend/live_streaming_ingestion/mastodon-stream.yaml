@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mastodon-stream
+  labels:
+    app: mastodon-stream
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: mastodon-stream
+  template:
+    metadata:
+      labels:
+        app: mastodon-stream
+    spec:
+      # Deployment uses the default restartPolicy: Always
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: mastodon-stream
+        image: alexis90024/ccc_assn2_docker_repo:mastodon-stream
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
+        env:
+          # Mastodon access tokens
+          - name: MASTODON_WORLD_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: mastodon-stream
+                key: mastodon-world-stream

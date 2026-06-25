@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bsky-stream
+  labels:
+    app: bsky-stream
+spec:
+  replicas: 1 # Stay at 1 to avoid duplicate data from the firehose
+  selector:
+    matchLabels:
+      app: bsky-stream
+  template:
+    metadata:
+      labels:
+        app: bsky-stream
+    spec:
+      # Deployment uses the default restartPolicy: Always
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: bsky-stream
+        image: alexis90024/ccc_assn2_docker_repo:bsky-livestream
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+          limits:
+            cpu: "500m"
+            memory: "1Gi"

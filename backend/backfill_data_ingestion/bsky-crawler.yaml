@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bsky-crawler
+  labels:
+    app: bsky-crawler
+spec:
+  parallelism: 5 
+  completions: 5
+  completionMode: Indexed
+  template:
+    metadata:
+      labels:
+        app: bsky-crawler
+    spec:
+      restartPolicy: OnFailure
+    # regcred is the access token for docker repo
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: bsky-crawler
+        image: alexis90024/ccc_assn2_docker_repo:bsky-crawler
+        imagePullPolicy: Always
+        env:
+        # Environment variables for Bluesky 
+        - name: BLUESKY_USER_HANDLE
+          valueFrom:
+            secretKeyRef:
+              name: bsky-secrets
+              key: handle
+        - name: BLUESKY_APP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: bsky-secrets
+              key: bsky_password
+        

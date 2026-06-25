@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "properties": {
+      "created_at": {
+        "type": "date"
+      },
+      "engagement": {
+        "type": "integer"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "text": {
+        "type": "text"
+      }
+    }
+  }
+}

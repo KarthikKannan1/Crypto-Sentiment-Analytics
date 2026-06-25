@@ -1,0 +1,32 @@
+[project]
+name = "comp90024-ml"
+version = "0.1.0"
+description = "ML sentiment, event and price analysis for COMP90024 Assignment 2"
+readme = "README.md"
+requires-python = ">=3.11, <3.13"
+
+dependencies = [
+    "torch==2.11.0",
+    "transformers==4.44.0",
+    "huggingface-hub==0.36.2",
+    "yfinance==1.3.0",
+    "scipy==1.17.1",
+    "pandas==3.0.2",
+    "numpy==2.4.4",
+    "beautifulsoup4==4.14.3",
+    "elasticsearch>=9.4.0",
+    "requests>=2.33.1",
+    "scikit-learn>=1.8.0",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter",
+    "ipykernel",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter",
+    "ipykernel",
+]

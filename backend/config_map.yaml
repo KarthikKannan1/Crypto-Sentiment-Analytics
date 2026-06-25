@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: default
+  name: parameters
+data:
+  ES_URL: 'https://elasticsearch-es-http.elastic.svc.cluster.local:9200'
+  REDIS_HOST: 'redis-headless.redis.svc.cluster.local'
+  ENQUEUE_URL: 'http://router.fission/enqueue/'
+  PROCESSED_DATA_TOPIC: 'processed-data'
+  RAW_BLUESKY_TOPIC: 'raw-bluesky'
+  RAW_MASTODON_TOPIC: 'raw-mastodon'

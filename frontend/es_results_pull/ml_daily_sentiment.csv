@@ -1,0 +1,48 @@
+date,avg_sentiment,post_count,bullish_count,bearish_count,neutral_count,dominant_topic,coin
+2026-05-04,0.34328358208955223,67,24,1,42,"24h, later, save later, save, watching",bitcoin
+2026-05-05,0.20536756126021002,857,216,40,601,"24h, later, save later, save, watching",bitcoin
+2026-05-06,0.14965986394557823,882,184,52,646,"24h, later, save later, save, watching",bitcoin
+2026-05-07,0.15749235474006115,654,162,59,433,"24h, later, save later, save, watching",bitcoin
+2026-05-08,0.13668061366806136,717,161,63,493,"24h, later, save later, save, watching",bitcoin
+2026-05-09,0.13333333333333333,585,141,63,381,"24h, later, save later, save, watching",bitcoin
+2026-05-10,0.17335766423357665,548,160,65,323,"24h, later, save later, save, watching",bitcoin
+2026-05-11,0.16435185185185186,432,106,35,291,"24h, later, save later, save, watching",bitcoin
+2026-05-12,0.18487394957983194,119,38,16,65,"24h, later, save later, save, watching",bitcoin
+2037-02-04,0.0,1,0,0,1,"na, halving, mempool, txs, 20280417",bitcoin
+2026-05-04,0.3888888888888889,36,15,1,20,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-05,0.28337874659400547,367,126,22,219,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-06,0.3164983164983165,297,103,9,185,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-07,0.28,275,87,10,178,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-08,0.2976588628762542,299,104,15,180,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-09,0.3412969283276451,293,103,3,187,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-10,0.4057377049180328,244,106,7,131,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-11,0.42788461538461536,208,97,8,103,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-12,0.38095238095238093,63,27,3,33,"xrp, investment, memecoin, notspam post, xrp notspam",ethereum
+2026-05-04,0.09090909090909091,11,2,1,8,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-05,0.18681318681318682,182,38,4,140,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-06,0.09777777777777778,225,25,3,197,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-07,0.2987012987012987,77,25,2,50,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-08,0.19148936170212766,141,29,2,110,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-09,0.3474576271186441,118,42,1,75,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-10,0.3333333333333333,51,19,2,30,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-11,0.20714285714285716,140,31,2,107,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-12,0.55,20,11,0,9,"live trump, moves live, massive moves, catching massive, moves",bnb
+2026-05-04,0.5909090909090909,22,13,0,9,"eth, sol, bnb, ada, 001",xrp
+2026-05-05,0.29411764705882354,187,60,5,122,"eth, sol, bnb, ada, 001",xrp
+2026-05-06,0.25,148,49,12,87,"eth, sol, bnb, ada, 001",xrp
+2026-05-07,0.36585365853658536,123,50,5,68,"eth, sol, bnb, ada, 001",xrp
+2026-05-08,0.336,125,45,3,77,"eth, sol, bnb, ada, 001",xrp
+2026-05-09,0.48905109489051096,137,71,4,62,"eth, sol, bnb, ada, 001",xrp
+2026-05-10,0.38666666666666666,75,33,4,38,"eth, sol, bnb, ada, 001",xrp
+2026-05-11,0.3939393939393939,66,30,4,32,"eth, sol, bnb, ada, 001",xrp
+2026-05-12,0.3103448275862069,29,10,1,18,"eth, sol, bnb, ada, 001",xrp
+2026-05-04,0.0,3,0,0,3,"minutes, achieved profit, period, achieved, takeprofit targets",usdt
+2026-05-05,0.16071428571428573,56,16,7,33,"million, 30, days, 30 days, tron",usdt
+2026-05-06,0.16326530612244897,49,11,3,35,"million, 30, days, 30 days, tron",usdt
+2026-05-07,0.022222222222222223,45,6,5,34,"million, 30, days, 30 days, tron",usdt
+2026-05-08,-0.07142857142857142,42,4,7,31,"million, 30, days, 30 days, tron",usdt
+2026-05-09,0.05714285714285714,35,5,3,27,"million, 30, days, 30 days, tron",usdt
+2026-05-10,0.125,32,6,2,24,"million, 30, days, 30 days, tron",usdt
+2026-05-11,0.3235294117647059,34,13,2,19,"million, 30, days, 30 days, tron",usdt
+2026-05-12,0.36363636363636365,11,5,1,5,"million, 30, days, 30 days, tron",usdt
+2037-02-04,0.0,1,0,0,1,"million, 30, days, 30 days, tron",usdt

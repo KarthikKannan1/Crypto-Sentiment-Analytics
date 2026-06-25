@@ -1,0 +1,21 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  name: delete
+spec:
+  createingress: false
+  functionref:
+    functionweights: null
+    name: delete
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /elastic-search/{index}/{docid}
+    tls: ""
+  method: ""
+  methods:
+  - DELETE
+  prefix: ""
+  relativeurl: /elastic-search/{index}/{docid}

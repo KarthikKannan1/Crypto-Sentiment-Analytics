@@ -1,0 +1,261 @@
+{
+  "coin": "usdt",
+  "post_count": 308,
+  "overlap_days": 9,
+  "correlations": {},
+  "daily_sentiment": [
+    {
+      "date": "2026-05-04",
+      "avg_sentiment": 0.0,
+      "post_count": 3,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 3,
+      "dominant_topic": "minutes, achieved profit, period, achieved, takeprofit targets"
+    },
+    {
+      "date": "2026-05-05",
+      "avg_sentiment": 0.16071428571428573,
+      "post_count": 56,
+      "bullish_count": 16,
+      "bearish_count": 7,
+      "neutral_count": 33,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-06",
+      "avg_sentiment": 0.16326530612244897,
+      "post_count": 49,
+      "bullish_count": 11,
+      "bearish_count": 3,
+      "neutral_count": 35,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-07",
+      "avg_sentiment": 0.022222222222222223,
+      "post_count": 45,
+      "bullish_count": 6,
+      "bearish_count": 5,
+      "neutral_count": 34,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-08",
+      "avg_sentiment": -0.07142857142857142,
+      "post_count": 42,
+      "bullish_count": 4,
+      "bearish_count": 7,
+      "neutral_count": 31,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-09",
+      "avg_sentiment": 0.05714285714285714,
+      "post_count": 35,
+      "bullish_count": 5,
+      "bearish_count": 3,
+      "neutral_count": 27,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-10",
+      "avg_sentiment": 0.125,
+      "post_count": 32,
+      "bullish_count": 6,
+      "bearish_count": 2,
+      "neutral_count": 24,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-11",
+      "avg_sentiment": 0.3235294117647059,
+      "post_count": 34,
+      "bullish_count": 13,
+      "bearish_count": 2,
+      "neutral_count": 19,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2026-05-12",
+      "avg_sentiment": 0.36363636363636365,
+      "post_count": 11,
+      "bullish_count": 5,
+      "bearish_count": 1,
+      "neutral_count": 5,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    },
+    {
+      "date": "2037-02-04",
+      "avg_sentiment": 0.0,
+      "post_count": 1,
+      "bullish_count": 0,
+      "bearish_count": 0,
+      "neutral_count": 1,
+      "dominant_topic": "million, 30, days, 30 days, tron"
+    }
+  ],
+  "topic_words": [
+    {
+      "topic_id": 0,
+      "topic_label": "minutes, achieved profit, period, achieved, takeprofit targets",
+      "top_words": [
+        "minutes",
+        "achieved profit",
+        "period",
+        "achieved",
+        "takeprofit targets",
+        "takeprofit",
+        "targets achieved",
+        "profit",
+        "targets",
+        "binance futures"
+      ]
+    },
+    {
+      "topic_id": 1,
+      "topic_label": "xrp, sol, bnb, doge, ada",
+      "top_words": [
+        "xrp",
+        "sol",
+        "bnb",
+        "doge",
+        "ada",
+        "eth",
+        "ton",
+        "usdc",
+        "usd1",
+        "zec"
+      ]
+    },
+    {
+      "topic_id": 2,
+      "topic_label": "million, 30, days, 30 days, tron",
+      "top_words": [
+        "million",
+        "30",
+        "days",
+        "30 days",
+        "tron",
+        "stablecoins",
+        "addresses",
+        "ethereum",
+        "blocksec",
+        "data"
+      ]
+    },
+    {
+      "topic_id": 3,
+      "topic_label": "liquidation, long, pair, entry, cross",
+      "top_words": [
+        "liquidation",
+        "long",
+        "pair",
+        "entry",
+        "cross",
+        "largest",
+        "stop",
+        "75x entry",
+        "cross 75x",
+        "profits"
+      ]
+    }
+  ],
+  "narrative_by_price_regime": [
+    {
+      "price_regime": "neutral/flat",
+      "topic_id": 2,
+      "topic_label": "million, 30, days, 30 days, tron",
+      "post_count": 216,
+      "percentage_within_price_regime": 70.35830618892508,
+      "active_start_date": "2026-05-04",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 9
+    },
+    {
+      "price_regime": "neutral/flat",
+      "topic_id": 3,
+      "topic_label": "liquidation, long, pair, entry, cross",
+      "post_count": 41,
+      "percentage_within_price_regime": 13.355048859934854,
+      "active_start_date": "2026-05-05",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 8
+    },
+    {
+      "price_regime": "neutral/flat",
+      "topic_id": 0,
+      "topic_label": "minutes, achieved profit, period, achieved, takeprofit targets",
+      "post_count": 32,
+      "percentage_within_price_regime": 10.423452768729643,
+      "active_start_date": "2026-05-04",
+      "active_end_date": "2026-05-11",
+      "active_duration_days": 8
+    },
+    {
+      "price_regime": "neutral/flat",
+      "topic_id": 1,
+      "topic_label": "xrp, sol, bnb, doge, ada",
+      "post_count": 18,
+      "percentage_within_price_regime": 5.863192182410423,
+      "active_start_date": "2026-05-05",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 8
+    }
+  ],
+  "narrative_by_volatility": [
+    {
+      "volatility_regime": "normal_volatility",
+      "topic_id": 2,
+      "topic_label": "million, 30, days, 30 days, tron",
+      "post_count": 216,
+      "average_weekly_return_pct": 0.002107631871318189,
+      "min_weekly_return_pct": -0.030104831581057034,
+      "max_weekly_return_pct": 0.007303190492669032,
+      "percentage_within_volatility_regime": 70.35830618892508,
+      "active_start_date": "2026-05-04",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 9
+    },
+    {
+      "volatility_regime": "normal_volatility",
+      "topic_id": 3,
+      "topic_label": "liquidation, long, pair, entry, cross",
+      "post_count": 41,
+      "average_weekly_return_pct": -0.0018207173301909845,
+      "min_weekly_return_pct": -0.030104831581057034,
+      "max_weekly_return_pct": 0.007303190492669032,
+      "percentage_within_volatility_regime": 13.355048859934854,
+      "active_start_date": "2026-05-05",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 8
+    },
+    {
+      "volatility_regime": "normal_volatility",
+      "topic_id": 0,
+      "topic_label": "minutes, achieved profit, period, achieved, takeprofit targets",
+      "post_count": 32,
+      "average_weekly_return_pct": 0.003796188423257213,
+      "min_weekly_return_pct": -0.030104831581057034,
+      "max_weekly_return_pct": 0.007303190492669032,
+      "percentage_within_volatility_regime": 10.423452768729643,
+      "active_start_date": "2026-05-04",
+      "active_end_date": "2026-05-11",
+      "active_duration_days": 8
+    },
+    {
+      "volatility_regime": "normal_volatility",
+      "topic_id": 1,
+      "topic_label": "xrp, sol, bnb, doge, ada",
+      "post_count": 18,
+      "average_weekly_return_pct": 0.0031467435955883577,
+      "min_weekly_return_pct": -0.030104831581057034,
+      "max_weekly_return_pct": 0.007303190492669032,
+      "percentage_within_volatility_regime": 5.863192182410423,
+      "active_start_date": "2026-05-05",
+      "active_end_date": "2026-05-12",
+      "active_duration_days": 8
+    }
+  ],
+  "spike_events": []
+}

@@ -1,0 +1,21 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  name: query-es
+spec:
+  createingress: false
+  functionref:
+    functionweights: null
+    name: query
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /elastic-search/{index}
+    tls: ""
+  method: ""
+  methods:
+  - POST
+  prefix: ""
+  relativeurl: /elastic-search/{index}
